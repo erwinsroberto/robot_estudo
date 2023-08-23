@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230823 19:22:55.481" rpa="false" schemaversion="4">
+<suite id="s1" name="Primeiro Teste" source="C:\Users\gervo\OneDrive\Área de Trabalho\estudos\CURSO_ROBOT\primeiro_teste.robot">
+<test id="s1-t1" name="Abrir navegador e acessar o site organo" line="5">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=http://localhost:3000/</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230823 19:22:55.722" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20230823 19:22:55.722" endtime="20230823 19:23:00.478"/>
+</kw>
+<status status="PASS" starttime="20230823 19:22:55.721" endtime="20230823 19:23:00.480"/>
+</test>
+<status status="PASS" starttime="20230823 19:22:55.482" endtime="20230823 19:23:00.482"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Primeiro Teste">Primeiro Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
