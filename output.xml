@@ -1,17 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230823 19:22:55.481" rpa="false" schemaversion="4">
-<suite id="s1" name="Primeiro Teste" source="C:\Users\gervo\OneDrive\Área de Trabalho\estudos\CURSO_ROBOT\primeiro_teste.robot">
-<test id="s1-t1" name="Abrir navegador e acessar o site organo" line="5">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230823 21:28:16.650" rpa="false" schemaversion="4">
+<suite id="s1" name="Preenchimento Correto" source="C:\Users\gervo\OneDrive\Área de Trabalho\estudos\CURSO_ROBOT\preenchimento_correto.robot">
+<test id="s1-t1" name="Verificar se ao preencher corretamente o formulário os dados são inseridos corretamente na lista e se um novo card é criado no time esperado" line="20">
+<kw name="Dado que eu acesse o organo">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>url=http://localhost:3000/</arg>
 <arg>browser=Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230823 19:22:55.722" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
-<status status="PASS" starttime="20230823 19:22:55.722" endtime="20230823 19:23:00.478"/>
+<msg timestamp="20230823 21:28:16.875" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20230823 21:28:16.875" endtime="20230823 21:28:19.101"/>
 </kw>
-<status status="PASS" starttime="20230823 19:22:55.721" endtime="20230823 19:23:00.480"/>
+<status status="PASS" starttime="20230823 21:28:16.875" endtime="20230823 21:28:19.102"/>
+</kw>
+<kw name="E preencha os campos do formulário">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CAMPO_NOME}</arg>
+<arg>Erwins</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230823 21:28:19.103" level="INFO">Typing text 'Erwins' into text field 'id:form-nome'.</msg>
+<status status="PASS" starttime="20230823 21:28:19.102" endtime="20230823 21:28:19.220"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CAMPO_CARGO}</arg>
+<arg>Quality Assurance</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230823 21:28:19.221" level="INFO">Typing text 'Quality Assurance' into text field 'id:form-cargo'.</msg>
+<status status="PASS" starttime="20230823 21:28:19.220" endtime="20230823 21:28:19.315"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CAMPO_IMAGEM}</arg>
+<arg>https://www.petz.com.br/blog/wp-content/uploads/2020/07/raca-de-cachorro-muito-popular-no-brasil-3-1280x720.jpg</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230823 21:28:19.316" level="INFO">Typing text 'https://www.petz.com.br/blog/wp-content/uploads/2020/07/raca-de-cachorro-muito-popular-no-brasil-3-1280x720.jpg' into text field 'id:form-imagem'.</msg>
+<status status="PASS" starttime="20230823 21:28:19.315" endtime="20230823 21:28:19.517"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CAMPO_TIME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230823 21:28:19.518" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<status status="PASS" starttime="20230823 21:28:19.517" endtime="20230823 21:28:19.567"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${OPCAO_PROGRAMACAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230823 21:28:19.568" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
+<status status="PASS" starttime="20230823 21:28:19.567" endtime="20230823 21:28:19.600"/>
+</kw>
+<status status="PASS" starttime="20230823 21:28:19.102" endtime="20230823 21:28:19.601"/>
+</kw>
+<kw name="E clique no botão criar card">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_CARD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230823 21:28:19.601" level="INFO">Clicking element 'id:form-botao'.</msg>
+<status status="PASS" starttime="20230823 21:28:19.601" endtime="20230823 21:28:19.669"/>
+</kw>
+<status status="PASS" starttime="20230823 21:28:19.601" endtime="20230823 21:28:19.669"/>
+</kw>
+<kw name="Então indentificar card no time esperado">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>class:colaborador</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230823 21:28:19.693" level="INFO">Element 'class:colaborador' is displayed.</msg>
+<status status="PASS" starttime="20230823 21:28:19.669" endtime="20230823 21:28:19.693"/>
+</kw>
+<status status="PASS" starttime="20230823 21:28:19.669" endtime="20230823 21:28:19.693"/>
+</kw>
+<status status="PASS" starttime="20230823 21:28:16.874" endtime="20230823 21:28:19.694"/>
 </test>
-<status status="PASS" starttime="20230823 19:22:55.482" endtime="20230823 19:23:00.482"/>
+<status status="PASS" starttime="20230823 21:28:16.651" endtime="20230823 21:28:19.695"/>
 </suite>
 <statistics>
 <total>
@@ -20,7 +77,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Primeiro Teste">Primeiro Teste</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Preenchimento Correto">Preenchimento Correto</stat>
 </suite>
 </statistics>
 <errors>
